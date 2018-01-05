@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<title>Angular login</title>
+	<script src="scr/angular.min.js"></script>
+  <script src="scr/app.js"></script>
+	<script src="scr/config.js"></script>
+  <script src="scr/angular-route.min.js"></script>
+  <!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body ng-controller="mycntl">
+   <div>
+   <a href="#!/home" class="btn btn-primary btn-lg"> <i class="glyphicon glyphicon-user"></i>User</a><br>
+   </div>
+   <div ng-view>
+    
+   </div>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDkXe1-x8swcxcBhSnHccj3OzgSgSSCb2Y",
+    authDomain: "myproject-f78d8.firebaseapp.com",
+    databaseURL: "https://myproject-f78d8.firebaseio.com",
+    projectId: "myproject-f78d8",
+    storageBucket: "myproject-f78d8.appspot.com",
+    messagingSenderId: "729191106143"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>

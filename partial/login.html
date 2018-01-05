@@ -1,0 +1,16 @@
+<form name="frm" novalidate>
+<div class="container" style="border-width: 50%, border: 1px solid green; padding: 4px -20px 3px -5px; background-color: #f2f2f2; margin: 20px 30px 20px 30px; right: top;">
+   <h2> Plaease signin </h2>
+   <div class="frm-grp" ng-class="{'has error': 'frm.email.$touched && frm.email.$invalid'}">
+   	   <input type="email" name="email" ng-model="user.email" placeholder="Email" required>
+   	   <small class="help-block" ng-show="frm.email.$touched && frm.email.$invalid" style="color:red;"> Invalid email</small>
+   </div>
+   <div class="frm-grp" ng-class="{'has error': 'frm.password.$touched && frm.password.$invalid'}">
+   	   <input type="password" name="password" ng-model="user.password" placeholder="password" ng-minlength="5" required>
+   	   <small class="help-block" ng-show="frm.password.$touched && frm.password.$error.minlength" style="color:red;"> Password short</small>
+   </div>
+     <button class="btn btn-lg btn-info" ng-click="login()">Login</button>
+     <a href="#!/signup" style="color: white; background-color:green;"> SignUp</a>
+	
+</div>	
+</form>
